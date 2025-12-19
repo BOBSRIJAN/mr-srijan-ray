@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* Custom animations */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #38066a; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #9b0f27, #1e1053);
+  border-radius: 10px;
+  animation: pulse 2s infinite alternate;
+}
+
+
+/* Modern animated gradient with mesh effect and dynamic lighting */
+.animated-gradient {
+  position: relative;
+  min-height: 100vh;
+  
+  /* Multi-layer gradient for depth */
+  background: 
+    linear-gradient(135deg, 
+      rgba(99, 102, 241, 0.9),  /* indigo-500 */
+      rgba(139, 92, 246, 0.8),  /* violet-500 */
+      rgba(236, 72, 153, 0.7),  /* pink-500 */
+      rgba(251, 146, 60, 0.6)   /* orange-400 */
+    ),
+    radial-gradient(at 20% 30%, #3b82f6 0%, transparent 50%),
+    radial-gradient(at 80% 70%, #8b5cf6 0%, transparent 50%),
+    radial-gradient(at 40% 80%, #ec4899 0%, transparent 50%);
+  
+  background-size: 300% 300%, 200% 200%, 200% 200%, 200% 200%;
+  background-blend-mode: normal, screen, screen, screen;
+  
+  animation: 
+    gradientFlow 20s ease infinite,
+    shimmer 8s ease-in-out infinite alternate;
+  
+  overflow: hidden;
+}
+
+/* Dynamic glow effect with pulsing */
+.animated-gradient::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(
+    circle at 50% 50%, 
+    rgba(255, 255, 255, 0.15), 
+    rgba(255, 255, 255, 0.05) 40%,
+    transparent 70%
+  );
+  animation: rotatingSphere 15s linear infinite;
+  pointer-events: none;
+}
+
+/* Modern animated gradient with mesh effect and dynamic lighting */
+.animated-gradient {
+  position: relative;
+  min-height: 100vh;
+  
+  /* Multi-layer gradient for depth */
+  background: 
+    linear-gradient(135deg, 
+      rgba(55, 48, 163, 0.95),  /* indigo-800 */
+      rgba(91, 33, 182, 0.9),   /* violet-800 */
+      rgba(157, 23, 77, 0.85),  /* pink-800 */
+      rgba(154, 52, 18, 0.8)    /* orange-800 */
+    ),
+    radial-gradient(at 20% 30%, #1e40af 0%, transparent 50%),
+    radial-gradient(at 80% 70%, #5b21b6 0%, transparent 50%),
+    radial-gradient(at 40% 80%, #9f1239 0%, transparent 50%);
+  
+  background-size: 300% 300%, 200% 200%, 200% 200%, 200% 200%;
+  background-blend-mode: normal, screen, screen, screen;
+  
+  animation: 
+    gradientFlow 20s ease infinite,
+    shimmer 8s ease-in-out infinite alternate;
+  
+  overflow: hidden;
+}
+
+/* Dynamic glow effect with pulsing */
+.animated-gradient::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(
+    circle at 50% 50%, 
+    rgba(255, 255, 255, 0.15), 
+    rgba(255, 255, 255, 0.05) 40%,
+    transparent 70%
+  );
+  animation: rotatingSphere 15s linear infinite;
+  pointer-events: none;
+}
