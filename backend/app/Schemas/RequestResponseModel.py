@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 class ProjectRequest(BaseModel):
-    projectid: int 
+    projectid: str 
     name: str
     description: str
     githublink: str
@@ -11,7 +11,7 @@ class ProjectRequest(BaseModel):
         return f"user id is {self.name}"
     
 class ProjecResponse(BaseModel):
-    projectid: int 
+    projectid: str 
     name: str
     description: str
     githublink: str 
@@ -21,24 +21,56 @@ class ProjecResponse(BaseModel):
         return f"user id is {self.name}"
     
 class ProjecDeleteResponse(BaseModel):
-    projectid: int 
+    projectid: str
     massage: str
     
     def __str__(self):
         return f"user id is {self.projectid}"
-    
-class ContactMassageRequest(BaseModel):
-    fullmane: str
+
+class InitContactMassageRequest(BaseModel):
+    fullname: str
     email: str
-    massages: str
+    massage: str
 
     def __str__(self):
-        return f"user id is {self.fullmane}"
+        return f"user id is {self.fullname}"
+
+class ContactMassageRequest(BaseModel):
+    userid: str
+    fullname: str
+    email: str
+    massage: str
+
+    def __str__(self):
+        return f"user id is {self.fullname}"
     
 class ContactMassageResponse(BaseModel):
-    fullmane: str 
+    userid: str
+    fullname: str 
     email: str 
-    massages: str
+    massage: str
 
     def __str__(self):
-        return f"user id is {self.fullmane}"
+        return f"user id is {self.fullname}"
+
+class ContactMassageDeleteResponse(BaseModel):
+    userid: str
+    massage: str
+    
+    def __str__(self):
+        return f"user id is {self.userid}"
+    
+class AdminCredentialsRequest(BaseModel):
+    username: str
+    password: str
+    
+class AdminCredentialsResponse(BaseModel):
+    user: str
+    isadmin: bool
+    username: str
+    massage: str 
+
+class AdminStausResponse(BaseModel):
+    user: str
+    islogin: bool
+    username: str
