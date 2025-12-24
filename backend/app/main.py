@@ -3,14 +3,14 @@ from app.Routers.route import router
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from app.DbConfig.MongoDBAtlas import establishConnection, terminatedConnection
-import logging
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("python")
+from app.worker.backgroundTask import Task
+import threading
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     establishConnection()
+    thread = threading.Thread(target=Task, daemon=False)
+    thread.start()
     yield
     terminatedConnection()
 
