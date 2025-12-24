@@ -6,7 +6,7 @@ import time
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("uvicorn")
 
-URL = "http://127.0.0.1:8000/"
+URL = "https://mr-srijan-ray-backend.onrender.com/"
 INTERVAL = 600
 
 def Task() -> None:
