@@ -2,6 +2,7 @@ from pydantic import BaseModel
 
 class ProjectRequest(BaseModel):
     projectid: str 
+    techstack: list[str]
     name: str
     description: str
     githublink: str
@@ -12,6 +13,7 @@ class ProjectRequest(BaseModel):
     
 class ProjecResponse(BaseModel):
     projectid: str 
+    techstack: list[str]
     name: str
     description: str
     githublink: str 
@@ -27,35 +29,35 @@ class ProjecDeleteResponse(BaseModel):
     def __str__(self):
         return f"user id is {self.projectid}"
 
-class InitContactMassageRequest(BaseModel):
+class InitContactMessageRequest(BaseModel):
     fullname: str
     email: str
-    massage: str
+    message: str
 
     def __str__(self):
         return f"user id is {self.fullname}"
 
-class ContactMassageRequest(BaseModel):
+class ContactMessageRequest(BaseModel):
     userid: str
     fullname: str
     email: str
-    massage: str
+    message: str
 
     def __str__(self):
         return f"user id is {self.fullname}"
     
-class ContactMassageResponse(BaseModel):
+class ContactMessageResponse(BaseModel):
     userid: str
     fullname: str 
     email: str 
-    massage: str
+    message: str
 
     def __str__(self):
         return f"user id is {self.fullname}"
 
-class ContactMassageDeleteResponse(BaseModel):
+class ContactMessageDeleteResponse(BaseModel):
     userid: str
-    massage: str
+    message: str
     
     def __str__(self):
         return f"user id is {self.userid}"
@@ -68,7 +70,7 @@ class AdminCredentialsResponse(BaseModel):
     user: str
     isadmin: bool
     username: str
-    massage: str 
+    message: str 
 
 class AdminStausResponse(BaseModel):
     user: str

@@ -25,4 +25,4 @@ def establishConnection() -> None:
 def terminatedConnection() -> None: 
     """ Terminate Connection with MongoDB Atlas """
     me.disconnect(alias="default")
-    logger.info("MongoDB Atlas Connection Terminated with Atlas...")
+    logger.info("MongoDB Atlas Connection Terminated with Atlas.")

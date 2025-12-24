@@ -20,7 +20,7 @@ function About() {
   };
   
   return (
-    <div className="relative min-h-screen text-white pt-24 pb-20 font-sans selection:bg-blue-500/30">
+    <div className="relative min-h-screen text-white pt-24 pb-20 font-sans selection:bg-blue-700/30">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }} transition={{ duration: 8, repeat: Infinity }} className="absolute top-0 left-[-10%] w-[70%] h-[70%] bg-blue-500/10 rounded-full blur-[120px]"/>
         <motion.div animate={{ scale: [1.2, 1, 1.2], opacity: [0.1, 0.15, 0.1] }} transition={{ duration: 10, repeat: Infinity }} className="absolute bottom-0 right-[-10%] w-[70%] h-[70%] bg-indigo-500/10 rounded-full blur-[120px]"/>
@@ -39,7 +39,7 @@ function About() {
             </div>
           </motion.div>
           <div className="space-y-6 text-center lg:text-left">
-            <h2 className="text-5xl lg:text-4xl font-black tracking-tighter">
+            <h2 className="text-3xl lg:text-2xl font-black tracking-tighter">
                 ABOUT <span className="text-blue-500">ME</span>
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-md font-light lg:text-justify mx-auto lg:mx-0">
@@ -49,7 +49,7 @@ function About() {
               contribute to innovative projects, and continue growing as a passionate IT professional.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-2">
-              {['Python', 'Django', 'FastAPI', 'Java', 'C', 'JavaScripe', 'React', 'TailwindCss', 'HTML', 'CSS', 'MongoDB', 'MySQL', 'Git', 'GitHub', 'Data Structures', 'DBMS'].map((tech) => (
+              {['Python', 'Django', 'FastAPI', 'Java', 'C', 'JavaScripe', 'React', 'TailwindCss', 'HTML', 'CSS', 'MongoDB', 'MySQL', 'Data Structures', 'DBMS', 'Git', 'GitHub', 'Docker', 'Postman'].map((tech) => (
                 <TechBadge key={tech} label={tech} />
               ))}
             </div>

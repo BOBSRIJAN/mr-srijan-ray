@@ -1,25 +1,27 @@
-const projects = [
-  {
-    id: 1,
-    title: "Inventory Management System",
-    description:
-      "A full-stack system built with Django and React for managing products, orders, and stock levels.",
-    link: "https://github.com/yourusername/inventory-system",
-  },
-  {
-    id: 2,
-    title: "AI Smart Glass",
-    description:
-      "An AI-powered smart glass for blind people using Raspberry Pi, YOLOv8, and voice control.",
-    link: "https://github.com/yourusername/ai-smart-glass",
-  },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    description:
-      "A modern portfolio website built using React, Tailwind CSS, and Vite.",
-    link: "https://github.com/yourusername/portfolio",
-  },
-];
+import {ENDPOINTS} from "./apiEndpoints"
 
-export default projects;
+export async function getProjects() {
+  const res = await fetch(ENDPOINTS.GET_PROJECTS);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch projects");
+  }
+
+  const data = await res.json();
+
+  return data.map((project) => ({
+    projectid: project.projectid,
+    name: project.name,
+    description: project.description,
+    techStack: project.techstack || [],
+    githublink: project.githublink?.startsWith("http")
+      ? project.githublink
+      : `${project.githublink}`,
+    deploylink: project.deploylink?.startsWith("http")
+      ? project.deploylink
+      : `${project.deploylink}`,
+    image:
+      project.image ||
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop",
+  }));
+}
