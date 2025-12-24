@@ -1,4 +1,4 @@
-export const API_BASE = "http://127.0.0.1:8000/reactportfolio/api/v1";
+export const API_BASE = "https://mr-srijan-ray-backend.onrender.com/reactportfolio/api/v1";
 export const ENDPOINTS = {
 LOGIN: `${API_BASE}/login`,
 LOGOUT: `${API_BASE}/logout`,
