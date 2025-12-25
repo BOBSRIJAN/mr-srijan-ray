@@ -59,7 +59,7 @@ function Contact() {
     };
 
     return (
-        <div className="relative min-h-screen flex items-center justify-center pt-32 pb-16 font-sans overflow-hidden bg-slate-950">
+        <div className="relative min-h-screen flex items-center justify-center pt-32 pb-16 font-sans overflow-hidden">
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <motion.div animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.15, 0.1] }} transition={{ duration: 10, repeat: Infinity }} className="absolute top-[-10%] right-[-5%] w-[60%] h-[60%] bg-blue-600/10 rounded-full blur-[120px]" />
                 <motion.div animate={{ scale: [1.2, 1, 1.2], opacity: [0.1, 0.15, 0.1] }} transition={{ duration: 12, repeat: Infinity }} className="absolute bottom-[-10%] left-[-5%] w-[60%] h-[60%] bg-indigo-600/10 rounded-full blur-[120px]" />
@@ -164,7 +164,7 @@ function ContactCard({ icon, title, value, subtext, action }) {
         <motion.div
             whileHover={{ x: 10 }}
             className="flex items-center gap-6 p-6 bg-white/5 border border-white/10 rounded-4xl group hover:bg-white/10 hover:border-blue-500/30 transition-all duration-300 shadow-xl">
-            <div className="p-4 bg-slate-900 rounded-2xl border border-white/10 group-hover:scale-110 group-hover:border-blue-500/50 transition-all duration-300">
+            <div className="p-4 bg-slate-800 rounded-2xl border border-white/10 group-hover:scale-110 group-hover:border-blue-500/50 transition-all duration-300">
                 {icon}
             </div>
             <div className="flex-1">
