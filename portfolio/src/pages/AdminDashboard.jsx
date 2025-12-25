@@ -40,7 +40,6 @@ export default function Dashboard() {
   }, [refreshTrigger]);
 
   const handleDeleteProject = async (project) => {
-    if (!window.confirm("Are you sure you want to delete this project?")) return;
     try {
       await fetch(ENDPOINTS.DELETE_PROJECT, {
         method: "DELETE",
@@ -55,7 +54,6 @@ export default function Dashboard() {
   };
 
   const handleDeleteMessage = async (msg) => {
-    if (!window.confirm("Delete this message permanently?")) return;
     try {
       const res = await fetch(ENDPOINTS.DELETE_CONTACT_MESSAGE, {
         method: "DELETE", 

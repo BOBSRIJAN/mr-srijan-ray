@@ -5,10 +5,9 @@ function Footer() {
     <footer className="bg-white dark:bg-gray-900 shadow-inner mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-        {/* Top Section */}
+
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
 
-          {/* Social Icons */}
           <div className="flex space-x-6 text-xl">
             <FooterIcon
               href="https://github.com/BOBSRIJAN"
