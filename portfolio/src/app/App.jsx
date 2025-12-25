@@ -11,6 +11,7 @@ import Contact from "../pages/Contact";
 import AdminDashboard from "../pages/AdminDashboard";
 import LoginPage from "../pages/LoginPage";
 import { AuthProvider, useAuth } from "../context/AuthContext";
+import ParticleBackground from "../components/common/ParticleBackgroundAnimation";
 
 
 function AdminRoute() {
@@ -36,13 +37,14 @@ function AppContent() {
   if (isLoading) {
     return <Loading />;
   }
-
+// bg-[#030712]
   return (
     <>
       <Navbar />
-      <div className="relative min-h-screen bg-[#030712] overflow-hidden flex flex-col font-sans">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="relative min-h-screen  overflow-hidden flex flex-col font-sans">
+        {/* <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none" /> */}
+        <ParticleBackground />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
