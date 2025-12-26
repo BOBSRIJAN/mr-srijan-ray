@@ -267,7 +267,7 @@ export default function Dashboard() {
         </motion.div>
       </header>
 
-      <main className="p-6 md:p-10">
+      <main className="pt-24">
         <AnimatePresence mode="wait">
           {currentView === "home" && <HomeView />}
           {currentView === "projects" && <ProjectsView />}

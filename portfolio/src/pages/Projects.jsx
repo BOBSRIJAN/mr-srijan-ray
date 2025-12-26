@@ -47,7 +47,7 @@ const ProjectCard = ({ project, variants }) => {
       <div className="p-8 flex flex-col grow">
         <h3 className="text-2xl font-bold text-white mb-3">{project.name}</h3>
 
-        <div className="text-gray-400 text-sm mb-6 text-justify grow">
+        <div className="text-gray-200 text-sm mb-6 text-justify grow">
            <p className="inline">
             {showMore || !isLong ? description : `${shortText}...`}
           </p>
@@ -143,8 +143,8 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter pt-10 mb-4 uppercase">
-            My <span className="text-blue-500">Projects</span>
+          <h2 className="text-5xl md:text-7xl font-black text-gray-300 tracking-tighter pt-10 mb-4 uppercase">
+            Projects <span className="text-blue-800">Undertaken</span>
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full" />
         </motion.div>

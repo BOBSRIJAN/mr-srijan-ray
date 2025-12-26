@@ -13,7 +13,7 @@ const ParticleBackground = () => {
     canvas.height = window.innerHeight;
 
     let particlesArray = [];
-    const numberOfParticles = 100; // Adjust for density
+    const numberOfParticles = 500; // Adjust for density
 
     // Create the particle class
     class Particle {

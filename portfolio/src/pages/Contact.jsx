@@ -67,8 +67,8 @@ function Contact() {
 
             <motion.section variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="relative z-10 w-full max-w-6xl px-6">
                 <motion.div variants={itemVariants} className="text-center mb-16">
-                    <h2 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tighter">
-                        LET'S <span className="text-blue-500">CONNECT</span>
+                    <h2 className="text-5xl md:text-7xl font-black text-gray-300 mb-6 tracking-tighter">
+                        LET'S <span className="text-blue-800">CONNECT</span>
                     </h2>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto font-light">
                         Have a project in mind? My inbox is always open.
@@ -94,7 +94,7 @@ function Contact() {
                         <form onSubmit={handleSubmit} className="relative z-10 space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-xs uppercase tracking-widest text-gray-500 font-bold ml-1">Full Name</label>
+                                    <label className="text-xs uppercase tracking-widest text-gray-300 font-bold ml-1">Full Name</label>
                                     <input
                                         required
                                         name="fullname"
@@ -102,11 +102,11 @@ function Contact() {
                                         onChange={handleChange}
                                         type="text"
                                         placeholder="Srijan Ray"
-                                        className="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-gray-600"
+                                        className="w-full bg-slate-800/50 border border-fuchsia-800/70 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-gray-600"
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-xs uppercase tracking-widest text-gray-500 font-bold ml-1">Email Address</label>
+                                    <label className="text-xs uppercase tracking-widest text-gray-300 font-bold ml-1">Email Address</label>
                                     <input
                                         required
                                         name="email"
@@ -114,12 +114,12 @@ function Contact() {
                                         onChange={handleChange}
                                         type="email"
                                         placeholder="srijan@example.com"
-                                        className="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-gray-600"
+                                        className="w-full  bg-slate-800/50 border border-indigo-800/70 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-gray-600"
                                     />
                                 </div>
                             </div>
                             <div className="space-y-2">
-                                <label className="text-xs uppercase tracking-widest text-gray-500 font-bold ml-1">Your Message</label>
+                                <label className="text-xs uppercase tracking-widest text-gray-300 font-bold ml-1">Your Message</label>
                                 <textarea
                                     required
                                     name="message"
@@ -127,7 +127,7 @@ function Contact() {
                                     onChange={handleChange}
                                     rows="5"
                                     placeholder="I'd love to talk about..."
-                                    className="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-gray-600 resize-none"
+                                    className="w-full  bg-slate-800/50 border border-rose-800/70 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-gray-600 resize-none"
                                 ></textarea>
                             </div>
 
@@ -135,18 +135,18 @@ function Contact() {
                                 disabled={loading}
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className={`w-full py-5 font-black uppercase tracking-widest text-sm rounded-2xl flex items-center justify-center gap-3 transition-all shadow-xl ${loading ? 'bg-gray-700' : 'bg-blue-600 hover:bg-blue-500 shadow-blue-600/20'}`}
+                                className={`w-full py-5 font-black uppercase tracking-widest text-sm text-white rounded-2xl flex items-center justify-center gap-3 transition-all shadow-xl ${loading ? 'bg-gray-700' : 'bg-blue-600 hover:bg-blue-500 shadow-blue-600/20'}`}
                             >
                                 {loading ? <Loader2 className="animate-spin" /> : <>Send Message <Send size={18} /></>}
                             </motion.button>
                             <AnimatePresence>
                                 {status === "success" && (
-                                    <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="flex items-center gap-2 text-green-400 text-sm justify-center font-bold">
+                                    <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="flex items-center gap-2 text-green-300 text-sm justify-center font-bold">
                                         <CheckCircle2 size={16} /> Message sent successfully!
                                     </motion.p>
                                 )}
                                 {status === "error" && (
-                                    <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="flex items-center gap-2 text-red-400 text-sm justify-center font-bold">
+                                    <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="flex items-center gap-2 text-red-600 text-sm justify-center font-bold">
                                         <AlertCircle size={16} /> Something went wrong. Try again.
                                     </motion.p>
                                 )}
