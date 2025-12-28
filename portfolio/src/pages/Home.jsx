@@ -27,7 +27,7 @@ function Home() {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl py-20 md:py-32 px-8 md:px-16 shadow-2xl"
+          className="bg-white/5 border border-white/10 backdrop-blur-xs rounded-3xl py-20 md:py-32 px-8 md:px-16 shadow-2xl"
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="flex-1 text-center md:text-left">
@@ -35,7 +35,7 @@ function Home() {
                 Available for Work
               </motion.span>
               <motion.h1 variants={itemVariants} className="text-3xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-                <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-400 to-indigo-500">
+                <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-600 via-green-200 to-rose-500">
                   <Typewriter
                     words={["Hi, I’m Srijan Ray", "Full-Stack Developer", "Designing Systems"]}
                     loop={Infinity}
@@ -43,11 +43,11 @@ function Home() {
                     cursorStyle="_"
                     typeSpeed={80}
                     deleteSpeed={50}
-                    delaySpeed={2000}
+                    delaySpeed={3000}
                   />
                 </span>
               </motion.h1>
-              <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-400 mb-10 max-w-lg leading-relaxed">
+              <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-300/90 mb-10 max-w-lg leading-relaxed">
                 I’m a Passionate Developer Creating <span className="text-white font-medium"> Innovative Solutions </span> With Love ❤️
               </motion.p>
 
@@ -67,9 +67,9 @@ function Home() {
             </div>
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-4">
               <SocialIcon href="https://github.com/BOBSRIJAN" icon={<FaGithub />} color="hover:text-white" />
-              <SocialIcon href="https://www.linkedin.com/in/srijan-ray-5b1967282/" icon={<FaLinkedin />} color="hover:text-blue-400" />
-              <SocialIcon href="https://www.facebook.com/srijan.ray.33" icon={<FaFacebook />} color="hover:text-blue-400" />
-              <SocialIcon href="https://discord.com/users/srijan_ray" icon={<FaDiscord />} color="hover:text-indigo-400" />
+              <SocialIcon href="https://www.linkedin.com/in/srijan-ray-5b1967282/" icon={<FaLinkedin />} color="hover:text-blue-300" />
+              <SocialIcon href="https://www.facebook.com/srijan.ray.33" icon={<FaFacebook />} color="hover:text-blue-300" />
+              <SocialIcon href="https://discord.com/users/srijan_ray" icon={<FaDiscord />} color="hover:text-indigo-300" />
             </div>
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
@@ -86,7 +86,7 @@ function Home() {
               }}
               className="relative group"
             >
-              <div className="absolute -inset-1 bg-linear-to-r from-blue-500 to-indigo-500 rounded-2xl blur opacity-25 group-hover:opacity-60 transition duration-1000"></div>
+              <div className="absolute -inset-1 bg-linear-to-r from-blue-600 via-green-200 to-rose-500 rounded-2xl blur opacity-25 group-hover:opacity-60 transition duration-1000"></div>
               <div className="relative bg-gray-900 rounded-2xl p-2 border border-white/10">
                 <img src="/img_srijan.jpg" alt="Srijan Ray" className="w-58 md:w-94 h-auto rounded-xl object-cover transition-all duration-500" />
               </div>
@@ -100,7 +100,7 @@ function Home() {
 
 function SocialIcon({ href, icon, color }) {
   return (
-    <motion.a whileHover={{ scale: 1.2, rotate: 5 }} whileTap={{ scale: 0.9 }} href={href} target="_blank" rel="noreferrer" className={`text-2xl text-gray-500 transition-all duration-300 ${color}`}>
+    <motion.a whileHover={{ scale: 1.5, rotate: 5 }} whileTap={{ scale: 1.5 }} href={href} target="_blank" rel="noreferrer" className={`text-3xl text-gray-500 transition-all duration-300 ${color}`}>
       {icon}
     </motion.a>
   );

@@ -49,27 +49,31 @@ function About() {
               contribute to innovative projects, and continue growing as a passionate IT professional.
             </p>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-3 max-w-2xl">
-              {['Python', 'Django', 'FastAPI', 'Java', 'C', 'JavaScripe', 'React', 'TailwindCss', 'HTML', 'CSS', 'MongoDB', 'MySQL', 'Kafka', 'Data Structures', 'DBMS', 'Git', 'GitHub', 'Docker', 'Postman'].map((tech, index) => (
-                <motion.div
-                  key={tech}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="group relative"
-                >
-                  {/* The "Glow" background */}
-                  <div className="absolute -inset-0.5 bg-linear-to-r from-blue-500 to-cyan-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-300"></div>
+<div className="flex flex-wrap justify-center lg:justify-start gap-3 max-w-2xl mx-auto lg:mx-0">
+  {[
+    'Python', 'Django', 'FastAPI', 'Java', 'C', 'JavaScript', // Fixed typo here
+    'React', 'TailwindCss', 'HTML', 'CSS', 'MongoDB', 'MySQL', 
+    'Kafka', 'Data Structures', 'DBMS', 'Git', 'GitHub', 'Docker', 'Postman'
+  ].map((tech, index) => (
+    <motion.div
+      key={tech}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1 }}
+      className="group relative"
+    >
+      {/* The "Glow" background */}
+      <div className="absolute -inset-0.5 bg-linear-to-r from-blue-500 to-cyan-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-300"></div>
 
-                  {/* The Badge */}
-                  <div className="relative px-6 py-3 bg-slate-900 rounded-lg leading-none flex items-center">
-                    <span className="text-slate-200 group-hover:text-white transition duration-200 font-semibold">
-                      {tech}
-                    </span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+      {/* The Badge */}
+      <div className="relative px-6 py-3 bg-slate-900 rounded-lg leading-none flex items-center">
+        <span className="text-slate-200 group-hover:text-white transition duration-200 font-semibold">
+          {tech}
+        </span>
+      </div>
+    </motion.div>
+  ))}
+</div>
 
             <div className="pt-4">
               <a href="/MYCV.pdf" download="Srijan_Ray_Resume.pdf" className="inline-flex items-center gap-3 px-8 py-4 bg-gray-300 text-black rounded-full font-bold hover:bg-blue-600 hover:text-white transition-all active:scale-95 shadow-lg">
